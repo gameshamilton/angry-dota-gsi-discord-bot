@@ -10,8 +10,8 @@ import topics from "../topics";
 
 export const configInfo = new ConfigInfo(
     rules.assistant.pull,
-    "Pull reminder",
-    "Reminds you to pull every 40 seconds",
+    "Pull",
+    "Reminds to pull",
     EffectConfig.PUBLIC
 );
 
