@@ -10,25 +10,25 @@ import topics from "../topics";
 
 export const configInfo = new ConfigInfo(
     rules.assistant.pull,
-    "40 second reminder",
-    "Executes at the 40 second mark of every minute",
+    "Pull reminder",
+    "Reminds you to pull every 40 seconds",
     EffectConfig.PUBLIC
 );
 
-const MINUTE_40_START_TIME = 40; // First trigger at 0:40
+const PULL_START_TIME = 100; // First trigger at 1:40
 const MINUTE_INTERVAL = 60; // Every 60 seconds (every minute)
 
 export default [
     new Rule({
-        label: "40 second mark reminder",
+        label: "Pull reminder",
         trigger: [topics.time],
-        then: () => new Fact(topics.configurableEffect, "resources/audio/40-seconds.mp3"),
+        then: () => new Fact(topics.configurableEffect, "resources/audio/pull.mp3"),
     }),
 ]
     .map((rule) => configurable(configInfo.ruleIndentifier, rule))
     .map((rule) =>
         everyIntervalSeconds(
-            MINUTE_40_START_TIME,
+            PULL_START_TIME,
             undefined,
             MINUTE_INTERVAL,
             rule
