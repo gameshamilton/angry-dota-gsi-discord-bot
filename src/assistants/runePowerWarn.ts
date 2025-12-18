@@ -23,7 +23,7 @@ export default [
     new Rule({
         label: "power rune reminder every 2 minutes (30 seconds beforehand)",
         trigger: [topics.time],
-        then: () => new Fact(topics.configurableEffect, "power rune soon."),
+        then: () => new Fact(topics.configurableEffect, "resources/audio/power-rune-soon.mp3"),
     }),
 ]
     .map((rule) => configurable(configInfo.ruleIndentifier, rule))

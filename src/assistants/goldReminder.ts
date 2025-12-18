@@ -118,20 +118,20 @@ export default [
         label: "when you have 1500 gold or less, use mild reminder",
         trigger: [discretionaryGoldTopic],
         when: ([gold]) => gold <= 1500,
-        then: () => new Fact(audioToPlayTopic, "spend gold."),
+        then: () => new Fact(audioToPlayTopic, "resources/audio/spend-gold.mp3"),
     }),
     new Rule({
         label: "when you have 1501-2500 gold, use medium reminder",
         trigger: [discretionaryGoldTopic],
         when: ([gold]) => gold > 1500 && gold <= 2500,
-        then: () => new Fact(audioToPlayTopic, "you have a lot of gold."),
+        then: () => new Fact(audioToPlayTopic, "resources/audio/you-have-a-lot-of-gold.mp3"),
     }),
     new Rule({
         label: "when you have 2500-3500 gold, use aggresive reminder",
         trigger: [discretionaryGoldTopic],
         when: ([gold]) => gold > 2500 && gold <= 3500,
         then: () =>
-            new Fact(audioToPlayTopic, "you really have a lot of gold."),
+            new Fact(audioToPlayTopic, "resources/audio/you-really-have-a-lot-of-gold.mp3"),
     }),
     new Rule({
         label: "when you have over 3500 gold, use super aggresive reminder",
@@ -140,7 +140,7 @@ export default [
         then: () =>
             new Fact(
                 audioToPlayTopic,
-                "you have an insane amount of gold. please stop what you are doing and spend it now."
+                "resources/audio/you-have-an-insane-amount-of-gold-please-stop-what-you-are-doing-and-spend-it-now.mp3"
             ),
     }),
     new Rule({

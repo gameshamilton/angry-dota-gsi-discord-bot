@@ -20,7 +20,7 @@ export default
             label: "reminder to check enemy inventory when dead",
             trigger: [topics.alive],
             when: ([alive]) => !alive,
-            then: () => new Fact(topics.configurableEffect, "Check enemy inventory"),
+            then: () => new Fact(topics.configurableEffect, "resources/audio/check-enemy-inventory.mp3"),
         })
     ]
     .map(inGame)

@@ -27,7 +27,7 @@ export default [
         when: ([items], [health, maxHealth]) =>
             items.findItem("item_polliwog_charm")?.canCast &&
             maxHealth - health >= HEALTH_RESTORED_ON_CAST,
-        then: () => new Fact(topics.configurableEffect, "Polliwog Charm."),
+        then: () => new Fact(topics.configurableEffect, "resources/audio/polliwog-charm.mp3"),
     }),
 ]
     .map(alive)

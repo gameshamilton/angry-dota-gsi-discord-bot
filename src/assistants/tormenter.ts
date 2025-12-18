@@ -20,7 +20,7 @@ export default [
         20,
         new Rule({
             label: rules.assistant.tormenter,
-            then: () => new Fact(topics.configurableEffect, `tormenter's up.`),
+            then: () => new Fact(topics.configurableEffect, "resources/audio/tormenters-up.mp3"),
         })
     ),
     atMinute(
@@ -29,7 +29,7 @@ export default [
             label: rules.assistant.tormenter,
             given: [topics.daytime],
             then: (_, [daytime]) => 
-                new Fact(topics.configurableEffect, `tormenter spawns ${daytime ? "bottom" : "top"} in 1 minute.`),
+                new Fact(topics.configurableEffect, daytime ? "resources/audio/tormenter-spawns-bottom-in-1-minute.mp3" : "resources/audio/tormenter-spawns-top-in-1-minute.mp3"),
         })
     ),
 ]

@@ -75,7 +75,7 @@ export default [
                     (helper.hasOpenSlot(items) || helper.hasSmallItem(items)) &&
                     !hasDetection(items),
                 then: () =>
-                    new Fact(topics.configurableEffect, "need detection."),
+                    new Fact(topics.configurableEffect, "resources/audio/need-detection.mp3"),
             }),
         ].map((rule) =>
             conditionalEveryIntervalSeconds(TIME_BETWEEN_REMINDERS, rule)

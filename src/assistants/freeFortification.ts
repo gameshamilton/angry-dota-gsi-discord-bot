@@ -21,7 +21,7 @@ const t1FreeFortWarnedAlready = new Topic<boolean>("t1FreeFortWarnedAlready");
 const t2FreeFortWarnedAlready = new Topic<boolean>("t2FreeFortWarnedAlready");
 const t3FreeFortWarnedAlready = new Topic<boolean>("t3FreeFortWarnedAlready");
 
-const freeFortAudio = "consider fortification.";
+const freeFortAudio = "resources/audio/consider-fortification.mp3";
 
 export default [
     new Rule({

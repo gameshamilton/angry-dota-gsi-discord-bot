@@ -38,13 +38,13 @@ export default [
         label: "inform user to buy health regen",
         trigger: [topics.time, topics.items],
         when: ([time, items]) => time < REGEN_REMINDER_STOP_TIME && !hasEnoughHealthRegen(items),
-        then: () => new Fact(topics.configurableEffect, "buy more health regen."),
+        then: () => new Fact(topics.configurableEffect, "resources/audio/buy-more-health-regen.mp3"),
     }),
     new Rule({
         label: "inform user to buy mana regen",
         trigger: [topics.time, topics.items],
         when: ([time, items]) => time < REGEN_REMINDER_STOP_TIME && !hasEnoughManaRegen(items),
-        then: () => new Fact(topics.configurableEffect, "buy more mana regen."),
+        then: () => new Fact(topics.configurableEffect, "resources/audio/buy-more-mana-regen.mp3"),
     }),
 ]
     .map((rule) =>

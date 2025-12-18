@@ -27,7 +27,7 @@ export default [
         when: ([items], [mana, maxMana]) =>
             items.findItem("item_mana_draught")?.canCast &&
             maxMana - mana >= MANA_RESTORED_ON_CAST + maxMana * 0.04,
-        then: () => new Fact(topics.configurableEffect, "mana draught."),
+        then: () => new Fact(topics.configurableEffect, "resources/audio/mana-draught.mp3"),
     }),
 ]
     .map(alive)

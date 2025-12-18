@@ -27,7 +27,7 @@ export default [
             label: `reminder to scan wisdom shrine ${WISDOM_SHRINE_SCAN_WARNING_TIME} seconds prior`,
             trigger: [topics.time],
             then: () =>
-                new Fact(topics.configurableEffect, "scan on wisdom shrine."),
+                new Fact(topics.configurableEffect, "resources/audio/scan-on-wisdom-shrine.mp3"),
         })
     ),
 ]
